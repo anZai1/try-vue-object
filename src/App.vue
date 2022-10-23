@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-      <h4>helloWorld</h4>
     </div>
-    <router-view/>
+    <router-view/> -->
+    <el-container>
+      <LeftNav></LeftNav>
+      <HeaderBar></HeaderBar>
+    </el-container>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import HeaderBar from "./components/HeaderBar.vue";
+import LeftNav from "./components/LeftNav.vue";
+export default {
+  components: {
+    HeaderBar,
+    LeftNav,
+  },
+};
+</script>
 
+<style>
 #nav {
   padding: 30px;
 }
